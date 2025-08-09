@@ -110,3 +110,169 @@ nav a.active {
     color: var(--accent);
     box-shadow: inset 0 -2px 0 var(--accent)
 }
+
+
+/* mobile */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px
+}
+
+/* hero */
+.hero {
+    min-height: calc(100vh - var(--nav-h));
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    align-items: center;
+    gap: 36px;
+    padding: 72px 0
+}
+
+.hero-left {}
+
+h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    line-height: 1.02;
+    margin-bottom: 8px
+}
+
+.role {
+    color: var(--muted);
+    margin-bottom: 18px;
+    font-weight: 600
+}
+
+.tagline {
+    max-width: 70ch;
+    color: var(--muted);
+    margin-bottom: 22px
+}
+
+.cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* space between all items */
+    flex-wrap: wrap;
+    /* in case on small screens */
+}
+
+.cta-row a.btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* space between text and icon */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.cta-row .socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    /* push socials to the right */
+}
+
+.cta-row .socials a {
+    font-size: 1.25rem;
+    /* adjust icon size */
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.cta-row .socials a:hover {
+    background-color: #eee;
+}
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    transition: var(--transition)
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #041018;
+    box-shadow: 0 6px 24px rgba(0, 188, 212, 0.12)
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.04)
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-left: 6px
+}
+
+.socials a {
+    color: var(--muted);
+    padding: 8px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.socials a:hover {
+    color: var(--accent)
+}
+
+/* Hero right card */
+.profile-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: var(--radius);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6)
+}
+
+.profile-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #081018
+}
+
+.profile-meta {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.meta-left {
+    font-size: 0.95rem
+}
+
+.meta-right {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--muted);
+    font-size: 0.85rem
+}
