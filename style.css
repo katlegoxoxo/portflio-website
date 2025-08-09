@@ -46,3 +46,67 @@ body {
     mix-blend-mode: screen;
     opacity: 0.9;
 }
+
+
+/* container */
+.wrap {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2
+}
+
+/* header/nav */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: var(--nav-h);
+    backdrop-filter: blur(8px);
+    background: linear-gradient(180deg, rgba(3, 7, 12, 0.45), rgba(3, 7, 12, 0.20));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between
+}
+
+.brand {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.6px
+}
+
+nav ul {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    align-items: center
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 8px;
+    transition: var(--transition)
+}
+
+nav a:hover {
+    color: var(--text);
+    background: linear-gradient(90deg, rgba(0, 188, 212, 0.06), rgba(30, 144, 255, 0.04))
+}
+
+nav a.active {
+    color: var(--accent);
+    box-shadow: inset 0 -2px 0 var(--accent)
+}
