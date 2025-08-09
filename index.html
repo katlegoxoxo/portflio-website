@@ -64,8 +64,7 @@
                     </div>
                 </div>
 
-                <p style="margin-top:16px" class="hint">Available for graduate roles, internships or freelance
-                    web/mobile tasks. Based in Johannesburg, South Africa.</p>
+                <p style="margin-top:16px" class="hint">Based in Johannesburg, South Africa.</p>
             </div>
             <aside class="profile-card" aria-hidden="true">
 
@@ -85,7 +84,7 @@
 
         <section id="about" data-aos="zoom-in">
 
-            <div class="section-title">[ About ]</div>
+            <div class="section-title">About </div>
             <div class="card">
                 <p>
                     IT graduate with hands-on experience in software development, data analysis, and cloud-based AI
@@ -171,14 +170,88 @@
                         <div class="skill"><i class="fas fa-mobile" style="width:18px"></i> Android Studio</div>
                         <div class="skill"><i class="fas fa-code" style="width:18px"></i> VS Code</div>
                         <div class="skill"><i class="fas fa-chart-line" style="width:18px"></i> Power BI (basic)</div>
-                        <div class="skill"><i class="fas fa-cloud" style="width:18px"></i> Google Cloud (Intro to LLMs)
-                        </div>
                     </div>
                 </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & CERTS -->
+        <section id="education">
+            <div class="section-title"> Education & Certifications </div>
+            <div class="cols">
+                <div class="card">
+                    <h4>Education</h4>
+                    <ul style="margin-top:8px;color:var(--muted)">
+                        <li>Diploma in Software Development — IIE Rosebank College</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Certifications & Badges</h4>
+                    <ul style="margin-top:8px;color:var(--muted)">
+                        <li>Introduction to Generative AI — Google</li>
+                        <li>Innovating with Google Cloud Artificial Intelligence — Google</li>
+                        <li>Java & Python certificates — HackerRank</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-title">[ Get In Touch ]</div>
+            <div class="cols">
+                <div class="card">
+                    <h4>Contact Info</h4>
+                    <p style="color:var(--muted)">Email: <a href="mailto:katlegomakete18@gmail.com"
+                            style="color:var(--accent)">katlegomakete18@gmail.com</a></p>
+                    <p style="color:var(--muted)">Phone: <a href="tel:+27695126439" style="color:var(--accent)">+27 69
+                            512 6439</a></p>
+                    <p style="color:var(--muted)">GitHub: <a href="https://github.com/katlegoxoxo" target="_blank"
+                            style="color:var(--accent)">github.com/katlegoxoxo</a></p>
+                    <p style="color:var(--muted)">LinkedIn: <a
+                            href="https://www.linkedin.com/in/katlego-shaun-makete-72225a250/" target="_blank"
+                            style="color:var(--accent)">katlego-shaun-makete</a></p>
+                </div>
+
+                <form id="contactForm" class="card" aria-label="Contact form">
+                    <div style="font-weight:700;margin-bottom:8px">Send a message</div>
+                    <div class="form-row">
+                        <input type="text" id="name" name="from_name" placeholder="Your name" required>
+                        <input type="email" id="email" name="from_email" placeholder="Your email" required>
+                        <textarea name="message" id="message" class="full" rows="5" placeholder="Message"
+                            required></textarea>
+                        <div class="full" style="display:flex;gap:8px;align-items:center">
+                            <button type="submit" class="btn btn-primary">Send Message <i
+                                    class="fas fa-paper-plane"></i></button>
+                            <a class="btn btn-ghost" href="mailto:katlegomakete18@gmail.com">Or email directly</a>
+                        </div>
+                    </div>
+                    <div id="formStatus" class="hint" style="margin-top:8px"></div>
+                </form>
             </div>
         </section>
 
     </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="wrap">© <span id="year"></span> Katlego Shaun Makete — Built with <i class="fas fa-heart"
+                style="color:var(--accent)"></i></div>
+    </footer>
+
+
+    </main>
+    <!-- EmailJS script (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,   // animation duration
+            once: true,      // animate only once
+            offset: 80,      // offset (in px) from the original trigger point
+        });
+    </script>
 </body>
 
 </html>
