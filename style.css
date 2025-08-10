@@ -292,11 +292,13 @@ section {
 }
 
 .card {
-    background: var(--panel);
+    background: rgba(15, 23, 32, 0.3); /* same hue as --panel but see-through */
     border-radius: 12px;
-    padding: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.03)
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* adds glassy blur effect */
 }
+
 
 .cols {
     display: grid;
