@@ -264,3 +264,48 @@ window.addEventListener('mousemove', e => {
 
 init();
 animate();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // gsap & ScrollTrigger are already loaded & registered (from the HTML)
+  gsap.from(".hero-left", {
+    opacity: 0,
+    x: -50,
+    duration: 1.2,
+    ease: "power3.out"
+  });
+
+  gsap.from(".profile-card", {
+    opacity: 0,
+    x: 50,
+    duration: 1.2,
+    delay: 0.3,
+    ease: "power3.out"
+  });
+
+  gsap.utils.toArray(".section-title").forEach((title, i) => {
+    gsap.from(title, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      delay: i * 0.1
+    });
+  });
+
+  gsap.utils.toArray(".project-card").forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      delay: i * 0.15
+    });
+  });
+});
