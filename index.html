@@ -43,7 +43,7 @@
     <main class="wrap" id="home">
 
         <!-- HERO -->
-        <section class="hero" id="heroSection" aria-label="Intro" data-aos="fade-up">
+        <section class="hero" id="heroSection" aria-label="Intro" >
             <div class="hero-left">
                 <h1>Katlego Shaun Makete</h1>
                 <div class="role">Aspiring Software Engineer — Software Dev • Data • Cloud & AI</div>
@@ -82,7 +82,7 @@
 
         <!-- ABOUT -->
 
-        <section id="about" data-aos="zoom-in">
+        <section id="about">
 
             <div class="section-title">About </div>
             <div class="card">
@@ -104,7 +104,7 @@
 
         <!-- PROJECTS -->
         <section id="projects">
-            <div class="section-title">[ Projects ]</div>
+            <div class="section-title"> Projects </div>
 
             <div class="project-grid">
                 <article class="project-card card">
@@ -242,16 +242,22 @@
 
     </main>
     <!-- EmailJS script (optional) -->
+    <!-- EmailJS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- 1) Load GSAP and the ScrollTrigger plugin first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- 2) Register the plugin in a tiny inline script so it's ready for script.js -->
     <script>
-        AOS.init({
-            duration: 800,   // animation duration
-            once: true,      // animate only once
-            offset: 80,      // offset (in px) from the original trigger point
-        });
+        gsap.registerPlugin(ScrollTrigger);
     </script>
+
+    <!-- 3) Then load your script which *uses* gsap -->
+    <script src="script.js"></script>
+
+
 </body>
 
 </html>
